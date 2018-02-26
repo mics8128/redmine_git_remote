@@ -7,7 +7,7 @@ require_dependency 'redmine_git_remote/poor_mans_capture3'
 class Repository::GitRemote < Repository::Git
 
   PLUGIN_ROOT = Pathname.new(__FILE__).join("../../../..").realpath.to_s
-  PATH_PREFIX = ENV['PATH'] + "/repos/"
+  PATH_PREFIX = ENV['HOME'] + "/repos/"
 
   before_validation :initialize_clone
 
